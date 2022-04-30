@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-server": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\"",
-    "install-modules": "concurrently \"npm install\" \"npm install --prefix backend\" \"npm install --prefix frontend\""
-  },
+    "install-modules": "npm i && npm install --prefix backend && npm install --prefix frontend"
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/insane1304/Conference-Management-Portal.git"
