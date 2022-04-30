@@ -1,3 +1,3 @@
 <h1 align="center">
-    STUDENT ACADEMIC MANAGEMENT PORTAL (SAMP)
+    Conference Management Portal (CMP)
 </h1>
