@@ -1,0 +1,28 @@
+.nav-margin {
+  margin: 0 0 10px 0;
+  padding: 1% 5.5%;
+}
+
+.bodypart-margin {
+  text-align: center;
+  margin: 5% 10%;
+}
+
+/* card paper style */
+.card-custom {
+  padding: 10px;
+  margin: 10px 20%;
+  border: #0dcaf0 solid 1px;
+}
+
+/* .card-custom:hover {
+  background-color: #e0ebeb;
+} */
+
+.light-someone {
+  font-weight: lighter;
+}
+.bbbtn{
+  width:auto !important;
+  margin:0px !important;
+}

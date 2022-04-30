@@ -1,1 +1,3 @@
-# Conference-Management-Portal
+<h1 align="center">
+    STUDENT ACADEMIC MANAGEMENT PORTAL (SAMP)
+</h1>

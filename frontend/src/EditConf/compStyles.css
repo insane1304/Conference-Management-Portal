@@ -1,0 +1,57 @@
+.signup-class {
+  margin-top: auto;
+  padding-top: 2%;
+  margin-left: 32%;
+  margin-right: 32%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .signup-class {
+    width: 100%;
+    margin: 40% 4% 4% 4%;
+  }
+}
+
+h3 {
+  text-align: center;
+}
+
+.make-div-to-center {
+  /* margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px; */
+  margin: 40px 20%;
+  padding-bottom: 30px;
+}
+
+/* .btn {
+  width: 100%;
+  margin: 5px 5px;
+} */
+
+.make-div-margin {
+  margin: 10px 0;
+}
+
+.iiname {
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 100%;
+  border: 1px solid;
+  border-radius: 15px;
+  width: auto;
+}
+
+.make-sep {
+  margin: 5px 5px;
+}
+/*
+.make-to-center {
+  padding-bottom: 10px;
+} */

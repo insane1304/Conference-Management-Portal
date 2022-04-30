@@ -1,0 +1,27 @@
+.nav-margin {
+  margin: 0 0 10px 0;
+  padding: 1% 5.5%;
+}
+
+.bodypart-margin {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.sspan {
+  width: 110px;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.bbtncss {
+  margin: 20px;
+}
+.bbbtn{
+  width:auto !important;
+  margin:0px !important;
+}

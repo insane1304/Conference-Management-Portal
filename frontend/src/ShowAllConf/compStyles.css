@@ -1,0 +1,32 @@
+.nav-margin {
+  margin: 0 0 10px 0;
+  padding: 1% 5.5%;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.search-table {
+  padding: 50px 20%;
+  border: 5px;
+}
+
+.input-box {
+  width: 80%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.bbbtn{
+  width:auto !important;
+  margin:0px !important;
+}

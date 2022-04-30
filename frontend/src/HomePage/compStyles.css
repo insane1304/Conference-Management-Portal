@@ -1,0 +1,39 @@
+.nav-margin {
+  margin: 0 0 10px 0;
+  padding: 1% 5.5%;
+}
+
+.home-body-2 {
+  margin: 50px 40px;
+}
+
+.div-imgshape {  height: 400px;
+}
+
+.mid-part {
+  text-align: center;
+  padding: 20px;
+}
+
+.mid-home {
+  background-color: rgb(211, 206, 206);
+}
+
+.two-buttons {
+  margin: 10px;
+}
+
+.Hcard {
+  color: red;
+}
+.bbtn{
+  width:auto !important;
+  margin:0px !important;
+}
+
+.Pcenter {
+  text-align: center;
+}
+.space{
+  padding: 1%;
+}

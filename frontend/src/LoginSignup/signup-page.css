@@ -1,0 +1,17 @@
+.signup-class {
+  margin-top: auto;
+  padding-top: 2%;
+  margin-left: 32%;
+  margin-right: 32%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .signup-class {
+    width: 100%;
+    margin: 40% 4% 4% 4%;
+  }
+}

@@ -1,0 +1,27 @@
+.login-class {
+  margin-top: 5%;
+  margin-left: 37%;
+  margin-right: 37%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+}
+
+label {
+  padding: 10px 0;
+}
+
+.custom-check-input {
+  margin: 10px 10px 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .login-class {
+    width: 100%;
+    margin: 40% 4% 4% 4%;
+  }
+}
+.forgot-password a {
+  color: #01579b;
+}

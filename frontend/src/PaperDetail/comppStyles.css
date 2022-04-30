@@ -1,0 +1,61 @@
+.alert {
+  text-align: justify;
+}
+.paper-card-custom {
+  padding: 10px;
+  margin: 10px 5%;
+}
+@media screen and (min-width: 480px) {
+  .paper-card-custom {
+    padding: 10px;
+    margin: 10px 20%;
+  }
+}
+.custom-button{
+  padding: 0;
+}
+.light-someone {
+  font-weight: lighter;
+}
+.card-text {
+  text-align: justify;
+}
+
+.submit-button {
+  /* float: left; */
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 0%;
+}
+
+.cancel-button {
+  float: right;
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 0%;
+}
+
+.d-custom {
+  margin: 20px 1px;
+}
+.bbbtn{
+  width:auto !important;
+  margin:0px !important;
+}
+
+
+.feedback-iname {
+  padding: 5px;
+  margin: 10px;
+  /* text-align: center; */
+  /* border: 1px solid; */
+  /* border-radius: 15px; */
+  width: auto;
+  /* float: left; */
+}
+
+.comment-sec {
+  text-align: center;
+}
