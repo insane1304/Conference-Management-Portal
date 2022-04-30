@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-server": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\"",
     "install-modules": "concurrently \"npm install --prefix backend\" \"npm install --prefix frontend\"",
-    "start-project": "concurrently \"npm install-modules\" \"npm start-server\""
+    "start-project": "concurrently \"npm run install-modules\" \"npm run start-server\""
 
   },
   "repository": {
