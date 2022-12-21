@@ -4,6 +4,9 @@
 .paper-card-custom {
   padding: 10px;
   margin: 10px 5%;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #0cdaf0;
 }
 @media screen and (min-width: 480px) {
   .paper-card-custom {
@@ -24,17 +27,19 @@
 .submit-button {
   /* float: left; */
   margin-top: 5%;
-  margin-left: 7%;
+  /* margin-left: 7%;
   margin-right: 7%;
-  margin-bottom: 0%;
+  margin-bottom: 0%; */
+  width:100% !important;
 }
 
 .cancel-button {
-  float: right;
+  width:100% !important;
+  /* float: right; */
   margin-top: 5%;
-  margin-left: 7%;
+  /* margin-left: 7%;
   margin-right: 7%;
-  margin-bottom: 0%;
+  margin-bottom: 0%; */
 }
 
 .d-custom {

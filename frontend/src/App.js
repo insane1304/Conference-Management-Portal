@@ -26,7 +26,9 @@ import ForgetPass from "./ForgetPassword/ForgotPass/App";
 import ResetPass from "./ForgetPassword/ResetPass/App";
 import EditConf from "./EditConf/App";
 import ReviewerFeedback from "./ReviewerFeedback/App";
-
+import ShowFeedback from "./ShowFeedback/App";
+import PendingRequests from "./PendingRequests/App";
+import MyFeedbacks from "./MyFeedbacks/MyFeedbacks";
 
 function App() {
     return (
@@ -39,6 +41,7 @@ function App() {
 
             <Route exact path="/conference/:token" component={ShowPapers} />
 
+
             <Route exact path="/profile/:token" component={ShowProfile} />
                 <NoLoggedRoute exact path="/login" component={Login}/>
                 <NoLoggedRoute exact path="/signup" component={SignUp} />
@@ -47,9 +50,10 @@ function App() {
 
 
 
-
-
+                <AuthorProtectedRoute exact path="/myfeedbacks/:token" component={MyFeedbacks} />
+                <AuthorProtectedRoute exact path="/showfeedback/myfeedbacks/:token/:token" component={ShowFeedback} />
                 <AuthorProtectedRoute exact path="/givefeedback/:token" component={ReviewerFeedback} />
+                <AuthorProtectedRoute exact path="/pendingrequests" component={PendingRequests} />
                 <AuthorProtectedRoute exact path="/user" component={AppUser} />
                 <AuthorProtectedRoute exact path="/editprofile" component={App_EditProfile} />
                 <AuthorProtectedRoute exact path="/editconf/:token" component={EditConf} />

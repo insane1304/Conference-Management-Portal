@@ -12,13 +12,13 @@ var storage=require("firebase/storage");
 var getDownloadURL=require("firebase/storage");
 
 const firebaseConfig = {
-  apiKey: process.env.APIKEY,
-  authDomain: process.env.AUTHDOMAIN,
-  projectId: process.env.PROJECTID,
-  storageBucket: process.env.STORAGEBASKET,
-  messagingSenderId: process.env.MESSAGINGSENDERID,
-  appId: process.env.APPID,
-  measurementId: process.env.MEASUREMENTID
+  apiKey: "AIzaSyCOw5dUqzr6rUAn6td1C6sDCihE6qYCqFU",
+  authDomain: "conference-management-portal.firebaseapp.com",
+  projectId: "conference-management-portal",
+  storageBucket: "conference-management-portal.appspot.com",
+  messagingSenderId: "616490053869",
+  appId: "1:616490053869:web:df0b641e4f41bc05d59ce4",
+  measurementId: "G-GLMLH7GBE3"
 };
 
 // Initialize Firebase

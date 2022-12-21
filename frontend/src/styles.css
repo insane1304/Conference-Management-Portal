@@ -23,7 +23,6 @@ body {
   font-weight: 400;
 }
 */
-
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -41,12 +40,10 @@ body {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }  */
-
 /* .middle{
   border-radius: 0;
   margin-bottom: -1px;
 } */
-
 .bottom {
   margin-bottom: 10px;
   border-top-left-radius: 0;

@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import "./index.css";
 import "./signup-page.css";
-import Navbar from "./Navbar.jsx";
+import Navbar from "../Navbar.jsx";
+import Sidebar from "../Sidebar";
 
 // below three modules are imported for country dropdown
 import { useState, useMemo } from "react";
@@ -68,7 +69,9 @@ export default function SignUp() {
 
 
   return (
-    <div>
+    <div className="APP">
+    <Sidebar/>
+    <div className="card">
       <Navbar />
       <div class="signup-class">
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -215,6 +218,7 @@ export default function SignUp() {
             </div>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );

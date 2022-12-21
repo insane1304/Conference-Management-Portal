@@ -69,6 +69,7 @@ export default class Body extends Component {
             else if(res.status===400){
               alert(res.error);
             }
+            this.setState({ ...this.state, submit: false });
         })
         // .catch((err) => console.log(err));
         .catch((error) => {
@@ -142,6 +143,18 @@ export default class Body extends Component {
               <button disabled={this.state.submit}  type="submit" class="btn btn-outline-primary btn-lg bbtncss ">
                 Submit
               </button>
+              {(() => {
+                if (this.state.submit) {
+                  return (
+                      <div className="text-center">
+                          <div className="spinner-border text-info m-3" role="status">
+
+                          </div>
+                          <p className="">Submission in progress.. Please wait..</p>
+                      </div>
+                  );
+                }
+              })()}
         </div>
       </div>
     </form>

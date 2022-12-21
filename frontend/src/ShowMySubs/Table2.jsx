@@ -9,7 +9,7 @@ function Table() {
   const [confId, setConfId] = useState({});
   const [isChairperson, setIsChairperson] = useState(false);
   const [isAuthor, setIsAuthor] = useState(false);
-  const [paperData, setPaperData] = useState({});
+  const [title, setTitle] = useState("");
 
   const [isData, setIsData] = useState(true);
 
@@ -36,6 +36,7 @@ function Table() {
                 setConfId(response.data.conf_id);
                 setIsChairperson(response.data.isChairperson);
                 setIsAuthor(response.data.isAuthor);
+                setTitle(response.data.conf_title)
                 setLoading(false);
             }
             else if(response.status==400){
@@ -68,6 +69,10 @@ function Table() {
   else {
     console.log(isAuthor)
     return (
+      <div>
+      <div class="bodypart-margin">
+        <h1>My submissions for the conference "{title}" are here !</h1>
+      </div>
     <div class="nav-margin">
     <a href={/conference/+confId} class="btn btn-outline-info">
           Show All Submittions for this conference
@@ -96,16 +101,18 @@ function Table() {
       <table class="table table-hover">
         <thead>
           <tr>
+          <th scope="col">#</th>
             <th scope="col">Paper Title</th>
             <th scope="col">Submission Date</th>
             <th scope="col">View</th>
           </tr>
         </thead>
         <tbody>
-        {data.map((paper) => (
+        {data.map((paper,index) => (
         <tr>
 
 
+          <td>{index+1}</td>
           <td>{paper.title}</td>
           <td>{fun(paper.creation_date)}</td>
           <td>
@@ -117,6 +124,7 @@ function Table() {
       ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 }

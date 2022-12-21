@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./compStyles.css";
-import Navbar from "./Nav.jsx";
-
+import Navbar from "../../Navbar.jsx";
+import Sidebar from "../../Sidebar"
 import { useForm } from "react-hook-form";
 import axios from "axios";
+
 
 
 export default function App() {
@@ -36,9 +37,11 @@ export default function App() {
           });
   };
   return (
-    <div>
+    <div className="APP">
+    <Sidebar/>
+    <div className="card">
       <Navbar />
-      <div className=" card d-margin">
+      <div className="  d-margin">
         <div>
           <h1 className="ph-center">Change password</h1>
         </div>
@@ -77,20 +80,20 @@ export default function App() {
                   className="form-control"
                   placeholder="type here"
                 ></input>
-                <button   type="submit" class="btn">
+                <button   type="submit" class="btn forget-btn">
                   Submit
                 </button>
               </div>
               {(() => {
                 if (submit) {
                   return (
-                    <button  type="submit" class="btn btn-outline-info">
+                    <button  type="submit" class="btn forget-btn btn-outline-info">
                       Submit
                     </button>
                   );
                 }
                 else return(
-                  <button  disabled type="submit" class="btn btn-outline-info">
+                  <button  disabled type="submit" class="btn forget-btn btn-outline-info">
                     Submit
                   </button>
                 )
@@ -100,7 +103,7 @@ export default function App() {
         })()}
 
 
-
+        </div>
       </div>
     </div>
   );

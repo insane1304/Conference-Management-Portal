@@ -13,10 +13,12 @@ function Cardpaper() {
   const [conference, setConference] = useState({});
   const [author, setAuthor] = useState({});
   const [rate, setRate] = useState({});
-  const [isReviewer, setIsReviewer] = useState({});
+  const [isReviewer, setIsReviewer] = useState(false);
+  const [isAuthor, setIsAuthor] = useState(false);
   const [usersrated, setUsersrated] = useState({});
   const [editable, setEditable] = useState(true);
   const [isLoading, setLoading] = useState(true);
+
   function getDateAndTime (date) {
      var ddate= new Date(date);
      return ddate.toLocaleDateString()+", " +ddate.toLocaleTimeString();
@@ -42,7 +44,8 @@ function Cardpaper() {
                 setRate(response.data[3]);
                 console.log(response.data[3])
                 setIsReviewer(response.data[4]);
-                setUsersrated(response.data[5]);
+                setIsAuthor(response.data[5]);
+                setUsersrated(response.data[6]);
                 // console.log("edit")
                 // console.log(rate)
                 // console.log(editable);
@@ -54,6 +57,7 @@ function Cardpaper() {
                   setEditable(true);
                   // console.log(editable);
                 }
+
                 setLoading(false);
             })
             .catch((error) => {
@@ -79,17 +83,19 @@ function Cardpaper() {
         value:rate,
         editable:true,
       }
-  }
-  else{
-     props={
-      value:rate,
-      editable:false,
     }
-  }
+    else{
+       props={
+        value:rate,
+        editable:false,
+      }
+    }
+
   return (
-    <div className="card paper-card-custom">
-      <div style={{ backgroundColor: "#0DCAF0" }} className="card-header">
-        {conference.title}
+    <div className=" paper-card-custom">
+      <div style={{ backgroundColor: "#0DCAF0" }} className="card-header"><strong>
+        Conference Name:
+        </strong>{ " "+ conference.title}
       </div>
       <div className="card-body">
         <h5 className="card-title">{paper.title}</h5>
@@ -106,11 +112,25 @@ function Cardpaper() {
         </a>
 
         {(() => {
+        if (isReviewer || isAuthor) {
+          return (
+            <div>
+              <div><a href={"/myfeedbacks/"+paper._id} className="btn btn-outline-info custom-button">
+                Show Feedback
+              </a></div>
+            </div>
+          )
+        }
+      })()}
+
+        {(() => {
         if (isReviewer) {
           return (
+            <div>
             <div><a href={"/givefeedback/"+paper._id} className="btn btn-outline-info custom-button">
               Give Feedback
             </a></div>
+            </div>
           )
         }
       })()}
@@ -135,11 +155,11 @@ function Cardpaper() {
 
             <div className="feedback-iname">
             <hr />
-              <h5>{user.firstName+" "+user.lastName}</h5>
+              <h5>{user.user_firstName+" "+user.user_lastName}</h5>
               <label> Rated : {user.rate.$numberDecimal} ⭐ </label>
 
-              <p>{user.feedback}</p>
-              <p> <sub>{"Time: "+getDateAndTime(user.creation_date)}</sub> </p>
+              <p>{user.user_feedback}</p>
+              <sub>{"Time: "+getDateAndTime(user.creation_date)}</sub>
 
             </div>
 
@@ -150,5 +170,7 @@ function Cardpaper() {
   );
 }
 }
+
+// <p> <sub>{"Time: "+getDateAndTime(user.creation_date)}</sub> </p>
 
 export default Cardpaper;

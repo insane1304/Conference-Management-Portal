@@ -1,0 +1,106 @@
+.nav-margin {
+  /* margin: 0 0 0 0 !important; */
+  padding: 1% 5.5%;
+  /* position: static !important;
+  display: block !important;
+  width: 100% !important; */
+}
+
+.color_margin {
+  background-color: #0c84c9;
+}
+
+.table-margin {
+  margin: 20px 10%;
+}
+
+.feedback-title-ontop {
+  text-align: center;
+  margin: 50px auto 20px auto;
+}
+.pendingrequests-btn{
+  width:auto !important;
+}
+
+hr {
+  margin-top: 1px;
+}
+
+.card {
+  width: 100%;
+}
+
+.card-margin {
+  margin: 0 0 !important;
+  width: 100%;
+}
+
+.card-body {
+  margin: 0 10%;
+}
+
+.feedback-button {
+  margin: 20px 20px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  color: "#cdcfd1";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* #root, */
+.APP {
+  font-family: sans-serif;
+  /* height: 100%; */
+  width: 100%;
+  display: flex;
+  /* flex-grow: 1; */
+  position: relative;
+}
+
+.custom-sidebar {
+  height: 100vh;
+  /* position: static !important; */
+  /* background-color: red !important; */
+}
+
+.App .main {
+  /*   padding: 24px; */
+  flex-grow: 1;
+  display: flex;
+}
+
+.sidebar-btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px;
+}
+
+.sidebar-btn {
+  padding: 1px 15px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #adadad;
+  text-decoration: none;
+  margin: 0 auto;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sidebar-btn span {
+  margin-left: 10px;
+  font-size: 13px;
+}
+.cmp-logo-img {
+  height: 50px;
+  /* border-radius: 50%; */
+  /* width: 50px; */
+}

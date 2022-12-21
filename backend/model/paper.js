@@ -1,17 +1,24 @@
 const mongoose = require("mongoose");
-const { Schema } = mongoose;
+const {
+  Schema
+} = mongoose;
 
 
 const ratingSchema = new mongoose.Schema({
-  user_id:{
+  user_id: {
     type: Schema.Types.ObjectId,
   },
-  rate:{
-    type:Schema.Types.Decimal128
-
+  rate: {
+    type: Schema.Types.Decimal128
   },
-  user_feedback:{
+  user_firstName:{
     type:String
+  },
+  user_lastName:{
+    type:String
+  },
+  user_feedback: {
+    type: String
   },
   creation_date: {
     type: Date,
@@ -27,31 +34,41 @@ const paperSchema = new mongoose.Schema({
     min: 3,
     max: 255,
   },
-  abstract:{
+  abstract: {
     type: String,
-    required:true,
+    required: true,
   },
-  keywords:{
+  keywords: {
     type: String,
-    required:true,
+    required: true,
   },
-  url:{
+  url: {
     type: String,
   },
-  author_id:{
+  author_id: {
     type: Schema.Types.ObjectId,
   },
-  conference_id:{
+  conference_id: {
     type: Schema.Types.ObjectId,
   },
-  feedbacks:[{
-    type: Schema.Types.ObjectId,
+  feedback_ids: [{
+    details: [{
+      ques: String,
+      ans: String,
+    }],
+    reviewer_id: {
+      type: Schema.Types.ObjectId,
+    },
+    creation_date: {
+      type: Date,
+      default: Date.now,
+    },
   }],
-  rating:{
+  rating: {
     type: Schema.Types.Decimal128,
     default: 0,
   },
-  usersrated:[{
+  usersrated: [{
     type: ratingSchema,
   }],
   creation_date: {
@@ -61,7 +78,7 @@ const paperSchema = new mongoose.Schema({
 });
 
 // Sets the created_at parameter equal to the current time
-paperSchema.pre("save", function (next) {
+paperSchema.pre("save", function(next) {
   now = new Date();
   if (!this.creation_date) {
     this.creation_date = now;

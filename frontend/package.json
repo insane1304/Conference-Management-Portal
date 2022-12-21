@@ -1,5 +1,5 @@
 {
-  "name": "student-portal",
+  "name": "CMP",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "react-confirm-alert": "^2.8.0",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.4",
+    "react-icons": "^4.3.1",
     "react-pdf": "^5.7.2",
     "react-pro-sidebar": "^0.6.0",
     "react-rating-stars-component": "^2.2.0",

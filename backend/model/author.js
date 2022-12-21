@@ -50,6 +50,18 @@ const authorSchema = new mongoose.Schema({
   conferences: [{
     type: Schema.Types.ObjectId,
   }],
+  pending_requests: [{
+    conference_titile:String,
+    conference_id: Schema.Types.ObjectId,
+    user_id:  Schema.Types.ObjectId,
+    user_firstName: String,
+    user_LastName: String,
+    role: String,
+    creation_date: {
+      type: Date,
+      default: Date.now,
+    },
+  }],
   creation_date: {
     type: Date,
     default: Date.now,

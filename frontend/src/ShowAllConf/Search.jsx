@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Scroll from "./Scroll";
 import SearchList from "./SearchList";
 import "./compStyles.css";
-import Navbar from "./Nav.jsx";
+import Navbar from "../Navbar.jsx";
 import Allconf from "./Allconf.jsx";
 import {  useEffect } from "react";
 import axios from "axios";
+import Sidebar from "../Sidebar"
 
 
 function Search() {
@@ -69,10 +70,12 @@ function Search() {
   }
   else
   return (
-    <div>
+    <div className="APP">
+    <Sidebar/>
+    <div style={{width:"100%"}}>
       <Navbar />
       <section>
-        <div className="App">
+        <div className="App ">
           <h2>Search any available paper or conference</h2>
           <input
             className="input-box"
@@ -89,6 +92,7 @@ function Search() {
         {/* {searchField === "" && !searchShow ? <Allconf /> : " "} */}
         {searchList()}
       </section>
+    </div>
     </div>
   );
 }

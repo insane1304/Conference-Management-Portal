@@ -11,7 +11,7 @@ function Footer() {
       <hr></hr>
       <footer class="py-5">
         <div class="row">
-          <div class="col-2">
+          <div class="col-4">
             <h5>Services</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -42,7 +42,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div class="col-2">
+          <div class="col-4">
             <h5>Contact Us</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -73,7 +73,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div class="col-2">
+          <div class="col-4">
             <h5>Other</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -97,16 +97,14 @@ function Footer() {
                 </a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">
-                  FAQs
-                </a>
+                <a class="nav-link p-0 text-muted">FAQs</a>
               </li>
             </ul>
           </div>
 
-          <div class="col-4 offset-1">
+          {/* <div class="col-4 offset-1">
             <form>
-              <h5>Subscribe to our portal</h5>
+              <h5>..</h5>
               <p>Monthly digest of whats new and exciting from us.</p>
               <div class="d-flex w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden">
@@ -119,11 +117,11 @@ function Footer() {
                   placeholder="Email address"
                 ></input>
                 <button class="btn btn-primary" type="button">
-                  Subscribe
+                  Send
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
         </div>
 
         <div class="d-flex justify-content-between py-4 my-4 border-top">

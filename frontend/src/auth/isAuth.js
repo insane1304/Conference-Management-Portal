@@ -29,7 +29,7 @@ async function IsAuthenticated(){
 function IsAuth(){
   console.log(localStorage.token);
   const token=localStorage.token;
-  if(token!=undefined){
+  if(token!==undefined){
     console.log(true);
     return true;
   }

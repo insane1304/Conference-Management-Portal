@@ -34,7 +34,7 @@
   margin: 5px 10px;
 }
 
-.btn {
+.forget-btn {
   /* margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
@@ -43,6 +43,9 @@
   color: black;
   margin: 10px 0;
   background-color: DodgerBlue;
+}
+.btn{
+  width: 100%;
 }
 
 .ph-center {

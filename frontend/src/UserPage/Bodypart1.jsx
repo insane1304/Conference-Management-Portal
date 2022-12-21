@@ -33,10 +33,11 @@ function Bodypart1() {
       );
   }
   else return (
-    <div class="bodypart1-margin">
+    <div className="bodypart1-margin">
+    <br/>
       <h1>{data.firstName+" "+data.lastName}</h1>
       <hr></hr>
-      <h2>Welcome to CMP!</h2>
+      <h2 style={{textAlign:"center"}}>Welcome to CMP!</h2>
     </div>
   );
 }

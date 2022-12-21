@@ -1,13 +1,17 @@
 import React from "react";
 
 import Body from "./Body.jsx";
-import Navbar from "./Nav.jsx";
+import Navbar from "../Navbar.jsx";
+import Sidebar from "../Sidebar"
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Body />
+    <div className="APP">
+    <Sidebar/>
+    <div className="card">
+    <Navbar/>
+      <Body/>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ function Homebody1() {
   return (
     <div
       id="carouselExampleIndicators"
-      class="container carousel slide"
+      className=" carousel slide "
       data-bs-ride="carousel"
     >
       <div class="carousel-indicators">
@@ -36,13 +36,13 @@ function Homebody1() {
       </div>
       <div class="carousel-inner">
         <div class="carousel-item div-imgshape">
-          <img src={Img1} class="d-block w-100" alt="..."></img>
+          <img src={Img1} class="d-block w-100 mx-auto" alt="..."></img>
         </div>
         <div class="carousel-item  div-imgshape">
-          <img src={Img2} class="d-block w-100" alt="..."></img>
+          <img src={Img2} class="d-block w-100 mx-auto" alt="..."></img>
         </div>
         <div class="carousel-item active  div-imgshape">
-          <img src={Img3} class="d-block w-100" alt="..."></img>
+          <img src={Img3} class="d-block w-100 mx-auto" alt="..."></img>
         </div>
       </div>
       <button

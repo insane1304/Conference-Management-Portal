@@ -1,13 +1,17 @@
 import React from "react";
 import Cardpaper from "./Cardpaper.jsx";
+import Sidebar from "../Sidebar"
 
-import Navbar from "./Nav.jsx";
+import Navbar from "../Navbar.jsx";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Cardpaper />
+    <div className="APP">
+      <Sidebar />
+      <div className="card">
+        <Navbar />
+        <Cardpaper />
+      </div>
     </div>
   );
 }

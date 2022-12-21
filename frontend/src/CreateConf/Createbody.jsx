@@ -61,6 +61,9 @@ function Createbody() {
   return (
     <div className="dcc-margin">
       <form onSubmit={handleSubmit(onSubmit)}>
+      <div class="bodypart-margin">
+        <h3> Create Conference </h3>
+      </div>
         <div className="form-group div-padding">
           <label className="margin-everywhere" htmlFor="exampleInputEmail1">
             Title/Name
@@ -148,8 +151,9 @@ function Createbody() {
 
         <button
           type="submit"
+
           disabled={submit}
-          className="btn btn-primary div-padding margin-everywhere bbtn"
+          className="btn btn-primary div-padding margin-everywhere create-conf-button "
         >
           Submit
         </button>

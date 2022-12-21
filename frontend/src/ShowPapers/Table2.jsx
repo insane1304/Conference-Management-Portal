@@ -2,22 +2,88 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import {IsAuth} from "../auth/isAuth"
+
 function Table() {
 
   const [data, setData] = useState({});
+  const [title, setTitle] = useState("");
 
-  const [paperData, setPaperData] = useState({});
-
-  const [isData, setIsData] = useState(true);
-
-  const [fetchPaper, setfetch] = useState(false);
+  const [isMember, setIsMember] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const [isLoading, setLoading] = useState(true);
 
+  const requestAuthorRole=()=>{
+    if(!IsAuth()){
+      alert("Please login to Request")
+    }
+    else{
+      setDisabled(true);
+      const responseObject={url:window.location.pathname};
+      const path="/author/request-author-role"+window.location.pathname;
+      console.log(path)
+      axios
+          .post(path, responseObject, {
+              headers: {
+                  "auth-token": localStorage.token,
+                  "Content-Type": "application/json",
+              },
+          })
+            .then((response) => {
+              console.log(response.data)
+              alert(response.data)
+              setDisabled(false)
+            })
+            .catch((error) => {
+              console.log(error)
+              if(error.response.data){
+                // console.log(error.response.data)
+                alert(error.response.data)
+              }
+              setDisabled(false)
+            });
+    }
+
+  }
+  const requestReviwerRole=()=>{
+    if(!IsAuth()){
+      alert("Please login to Request")
+    }
+    else{
+      setDisabled(true)
+      const responseObject={url:window.location.pathname};
+      const path="/author/request-reviewer-role"+window.location.pathname;
+      console.log(path)
+      axios
+          .post(path, responseObject, {
+              headers: {
+                  "auth-token": localStorage.token,
+                  "Content-Type": "application/json",
+              },
+          })
+            .then((response) => {
+              console.log(response.data)
+              alert(response.data)
+              setDisabled(false)
+            })
+            .catch((error) => {
+              console.log(error)
+              if(error.response.data){
+                // console.log(error.response.data)
+                alert(error.response.data)
+              }
+              setDisabled(false)
+            });
+    }
+  }
+
   useEffect(() => {
     const responseObject={url:window.location.pathname};
+    const path="/conference/showpapers"+window.location.pathname;
+    console.log(path)
     axios
-        .post("/conference/showpapers", responseObject, {
+        .post(path, responseObject, {
             headers: {
                 "auth-token": localStorage.token,
                 "Content-Type": "application/json",
@@ -25,36 +91,31 @@ function Table() {
         })
           .then((response) => {
             console.log(response.data)
-              setData(response.data);
+              setData(response.data[0]);
+              if(response.data[1]===1 || response.data[1]===true)
+              {
+                setIsMember(true)
+              }
+              setTitle(response.data[2])
               setLoading(false);
+
+              if(!IsAuth()){
+                console.log("HO");
+                setIsMember(false)
+                // setDisabled(true)
+              }
           })
-          .catch((error) => console.log(error));
+          .catch((error) => {
+            console.log(error)
+            if(error.response.data){
+              // console.log(error.response.data)
+              alert(error.response.data)
+            }
+          });
   }, [isLoading]);
 
-  // if(isData==false){
-    // useEffect(() => {
-    //   if(fetchPaper==true){
-    //     const responseObject={data:data.paper_urls};
-    //     axios
-    //         .post("/conference/getpapertitle", responseObject, {
-    //             headers: {
-    //                 "auth-token": localStorage.token,
-    //                 "Content-Type": "application/json",
-    //             },
-    //         })
-    //           .then((response) => {
-    //             console.log(response.data)
-    //               setPaperData(response.data);
-    //               setLoading(false);
-    //               setfetch(false);
-    //           })
-    //           .catch((error) => console.log(error));
-    //   }
-
-    // }, [fetchPaper]);
-
     function fun (date) {
-      
+
        var ddate= new Date(date);
        return ddate.toDateString()
     }
@@ -68,22 +129,41 @@ function Table() {
       );
   }
   else {
-    console.log(data)
+    console.log(isMember)
     return (
+      <div>
+      <div class="bodypart-margin">
+        <h1>All submissions for the conference "{title}" are here !</h1>
+      </div>
     <div class="nav-margin">
+    {(() => {
+        if (!isMember) {
+          return (
+            <div>
+              <button onClick={requestAuthorRole} disabled={disabled} class="btn btn-outline-info">
+                Request Author Role
+              </button>
+              <button onClick={requestReviwerRole} disabled={disabled}  class="btn btn-outline-info">
+                Request Reviewer Role
+              </button>
+            </div>
+          )
+        }
+      })()}
+
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#</th>
+          <th scope="col">#</th>
             <th scope="col">Paper Title</th>
             <th scope="col">Creation Date</th>
             <th scope="col">View</th>
           </tr>
         </thead>
         <tbody>
-        {data.map((paper) => (
+        {data.map((paper,index) => (
         <tr>
-          <th scope="row">{paper.key+1}</th>
+        <td>{index+1}</td>
           <td>{paper.title}</td>
           <td>{fun(paper.creation_date)}</td>
           <td>
@@ -94,6 +174,7 @@ function Table() {
       ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 }

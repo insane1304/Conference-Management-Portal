@@ -8,6 +8,7 @@ function Table() {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
 
+
   useEffect(() => {
       axios
           .get("/author/myconferences", {
@@ -41,20 +42,30 @@ function Table() {
 
   else {console.log(data);
   return (
+    <div>
+    <div class="bodypart-margin">
+      <h1>All my conferences are here !</h1>
+    </div>
     <div class="nav-margin">
       <table class="table table-hover">
         <thead>
           <tr>
+          <th scope="col">#</th>
             <th scope="col">Conderence Title</th>
+            <th scope="col">Research Area</th>
+            <th scope="col">Description</th>
             <th scope="col">Creation date</th>
             <th scope="col">View</th>
           </tr>
         </thead>
         <tbody>
-        {data.map((conference) => (
+        {data.map((conference,index) => (
 
         <tr>
+        <td>{index+1}</td>
           <td>{conference.title}</td>
+          <td>{conference.researchArea}</td>
+          <td>{conference.description}</td>
 
           <td>{fun(conference.creation_date)}</td>
           <td>
@@ -65,6 +76,7 @@ function Table() {
       ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 }

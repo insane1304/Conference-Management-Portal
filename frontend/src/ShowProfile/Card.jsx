@@ -46,8 +46,8 @@ function Card(props) {
   else{
     const logged_user=data[0];
     const searched_user=data[1];
-    console.log(logged_user);
-    console.log(searched_user);
+    // console.log(logged_user);
+    // console.log(searched_user);
     const conferences=data[2];
 
   return (
@@ -64,7 +64,7 @@ function Card(props) {
       else{
         return (
           <div>
-          <div class="card card-custom">
+          <div class=" card-custom">
             <div class="card-header">Profile Card</div>
             <div class="card-body">
               <h5 class="card-title">{searched_user.firstName+" "+searched_user.lastName}</h5>
@@ -94,7 +94,7 @@ function Card(props) {
             </thead>
 
             <tbody>
-            {conferences.map((paper) => (
+            {conferences.map((paper,index) => (
             <tr>
               <td>{paper.title}</td>
               <td>{fun(paper.creation_date)}</td>

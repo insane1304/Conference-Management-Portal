@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./login-page.css";
 import "./index.css";
-import Navbar from "./Navbar.jsx";
+import Navbar from "../Navbar.jsx";
+import Sidebar from "../Sidebar"
 import{ useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -38,7 +39,9 @@ import { useHistory } from "react-router";
   };
 
   return (
-    <div>
+    <div className="APP">
+    <Sidebar />
+    <div className="card">
       <Navbar />
       <div class="login-class">
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -94,6 +97,7 @@ import { useHistory } from "react-router";
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 }

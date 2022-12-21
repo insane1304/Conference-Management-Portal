@@ -69,7 +69,7 @@ router.post('/upload', verify, upload.single('file'), async (req, res, next) => 
             else conference_id+=temp[i];
         }
       }
-      // console.log(conference_id)
+      console.log(conference_id)
 
       const { error } = uploadDetailsValid(req.body)
 

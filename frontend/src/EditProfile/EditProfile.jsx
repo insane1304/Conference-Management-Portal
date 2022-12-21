@@ -112,8 +112,8 @@ export default function EditProfile() {
         <hr></hr>
 
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Email</label>
-          <div className="col-sm-10">
+          <label className=" col-form-label">Email</label>
+          <div className="">
             <input
               type="email"
               className="form-control"
@@ -129,8 +129,8 @@ export default function EditProfile() {
         {/* personal imformation  */}
 
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">First Name</label>
-          <div className="col-sm-10">
+          <label className=" col-form-label">First Name</label>
+          <div className="">
             <input
               type="text"
               className="form-control"
@@ -144,8 +144,8 @@ export default function EditProfile() {
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Last Name</label>
-          <div className="col-sm-10">
+          <label className=" col-form-label">Last Name</label>
+          <div className="">
             <input
               className="form-control"
               type="text"
@@ -159,8 +159,8 @@ export default function EditProfile() {
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Contact</label>
-          <div className="col-sm-10">
+          <label className=" col-form-label">Contact</label>
+          <div className="">
             <input
               className="form-control"
               type="tel"
@@ -176,8 +176,8 @@ export default function EditProfile() {
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Organisation Name</label>
-          <div className="col-sm-10">
+          <label className=" col-form-label">Organisation Name</label>
+          <div className="">
             <input
               className="form-control"
               type="text"

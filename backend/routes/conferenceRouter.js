@@ -7,7 +7,7 @@ const {
   showAllConf,
 } = require("../controllers/conferenceController");
 
-conferenceRouter.post("/showpapers", showPapers);
+conferenceRouter.post("/showpapers/conference/:token", showPapers);
 conferenceRouter.post("/getpaperdetail/paper/:id", getPaperDetail);
 conferenceRouter.post("/getpapertitle", getPaperTitle);
 conferenceRouter.get("/allconferences", showAllConf);

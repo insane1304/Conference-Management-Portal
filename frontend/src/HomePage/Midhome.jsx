@@ -8,7 +8,7 @@ function Midhome() {
   return (
     <div class="container">
       <br></br>
-      <h1 class="">Welcome to conferences </h1>
+      <h1 class="">Welcome to CMP </h1>
       {(() => {
         if (IsAuth()) {
 

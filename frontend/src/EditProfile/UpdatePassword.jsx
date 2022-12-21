@@ -52,17 +52,17 @@ export default function UpdateProfile() {
   };
 
   return (
-    <div class="signup-class">
+    <div class="edit-signup-class">
       <form onSubmit={handleSubmit(onSubmit)}>
 
       <h3 className="hh3">Update Password</h3>
       <hr></hr>
       {/* change password */}
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label">Old password</label>
-        <div className="col-sm-10">
+        <label className="col-form-label">Old password</label>
+        <div className="">
           <input
-            className="form-control"
+            className="form-control inp-length"
             type="password"
             id="password"
             name="initialPass"
@@ -73,10 +73,10 @@ export default function UpdateProfile() {
       </div>
 
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label">New password</label>
-        <div className="col-sm-10">
+        <label className=" col-form-label">New password</label>
+        <div className="">
           <input
-            className="form-control"
+            className="form-control inp-length"
             type="password"
             id="password"
             name="newPass"
@@ -87,12 +87,12 @@ export default function UpdateProfile() {
       </div>
 
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label">
+        <label className="col-form-label">
           Confirm new password
         </label>
-        <div className="col-sm-10">
+        <div className="">
           <input
-            className="form-control"
+            className="form-control inp-lentgh"
             type="password"
             id="confirm-password"
             name="confirmPass"
